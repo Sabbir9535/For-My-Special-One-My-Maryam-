@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For My Special One , My Maryam ❤️</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to right, #ff9a9e, #fad0c4);
+            text-align: center;
+            padding: 50px;
+            color: #fff;
+            overflow-x: hidden;
+        }
+        h1 {
+            font-size: 3rem;
+            animation: fadeIn 2s ease-in-out;
+        }
+        p {
+            font-size: 1.5rem;
+            animation: slideIn 2s ease-in-out;
+        }
+        .message {
+            font-size: 1.8rem;
+            margin-top: 30px;
+            animation: typing 3s steps(30, end);
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: 3px solid white;
+            display: inline-block;
+        }
+        .name {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #ff7f50;
+            animation: typingName 3s steps(15, end);
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes slideIn {
+            from { transform: translateY(-50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+        @keyframes typingName {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+        .heart {
+            font-size: 5rem;
+            color: red;
+            margin-top: 30px;
+            animation: beat 1s infinite;
+        }
+        @keyframes beat {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+        }
+        .btn {
+            margin-top: 20px;
+            padding: 15px 30px;
+            font-size: 1.5rem;
+            border: none;
+            background: #ff4b5c;
+            color: white;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .btn:hover {
+            background: #ff1c37;
+        }
+        .container {
+            max-width: 90%;
+            margin: auto;
+        }
+        .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            color: #333;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            font-size: 1.5rem;
+        }
+        .popup button {
+            padding: 10px 20px;
+            background: #ff4b5c;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.2rem;
+        }
+        .popup button:hover {
+            background: #ff1c37;
+        }
+        @media (max-width: 768px) {
+            h1 { font-size: 2.5rem; }
+            p { font-size: 1.2rem; }
+            .message { font-size: 1.5rem; }
+            .heart { font-size: 4rem; }
+            .btn { font-size: 1.2rem; padding: 10px 20px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome, My Beloved Maryam ❤️</h1>
+        <p>You are the most special person in my life.</p>
+        <div class="message">I love you more than words can say...</div>
+        <div class="heart">❤️</div>
+        <div class="name">Maryam</div>
+        <button class="btn" onclick="showSurprise()">Click for Surprise</button>
+        <p id="surpriseText" style="display: none; font-size: 2rem; margin-top: 20px;">If you tell me, "I can do anything," I will do everything, just to see you happy.💖</p>
+    </div>
+
+    <!-- Surprise Popup -->
+    <div id="popup" class="popup">
+        <p>Maryam, You are my everything! 💖</p>
+        <button onclick="closePopup()">Close</button>
+    </div>
+
+    <script>
+        function showSurprise() {
+            document.getElementById('surpriseText').style.display = 'block';
+            document.getElementById('popup').style.display = 'block';
+        }
+
+        function closePopup() {
+            document.getElementById('popup').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
